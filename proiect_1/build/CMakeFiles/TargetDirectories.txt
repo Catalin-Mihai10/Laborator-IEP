@@ -1,0 +1,5 @@
+/home/catalin/IEP/proiect_1/build/CMakeFiles/rebuild_cache.dir
+/home/catalin/IEP/proiect_1/build/CMakeFiles/edit_cache.dir
+/home/catalin/IEP/proiect_1/build/CMakeFiles/main.dir
+/home/catalin/IEP/proiect_1/build/source/CMakeFiles/rebuild_cache.dir
+/home/catalin/IEP/proiect_1/build/source/CMakeFiles/edit_cache.dir

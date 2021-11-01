@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsaluta.a CMakeFiles/saluta.dir/salut/Salut.cpp.o
+/usr/bin/ranlib libsaluta.a
