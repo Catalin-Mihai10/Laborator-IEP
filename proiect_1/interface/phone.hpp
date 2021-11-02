@@ -5,7 +5,6 @@
 
 class Phone {
 
-
     public:
         Phone();
 
@@ -13,7 +12,6 @@ class Phone {
 
         Phone(const Phone& copiedPhone);
 
-        //Phone(Phone&& phone);
         ~Phone();
 
         void upgradeMemory(memoryTypes newInternalStorage);
@@ -24,7 +22,7 @@ class Phone {
 
         proccesorTypes getPhoneProccesor();
 
-        void getPhoneSpecs();
+        void getPhoneSpecs(); 
 
         int getBattery();
 
@@ -47,6 +45,9 @@ class Phone {
         void switchPhoneRam();
 
     private:
+        Phone(Phone&&) = default;
+        Phone& operator=(Phone&);
+
         int battery, ram, internalStorage;
         bool g5, wifi, bluetooth, dualSim, waterResistance;
         PhoneTypes phone;

@@ -1,8 +1,5 @@
 #include "main.hpp"
 #include "phone.hpp"
-//#include<iostream>
-
-//#include <salut/Salut.hpp>
 
 int main(){
 
@@ -32,7 +29,7 @@ int main(){
     std::cout << "*******************************************************" << std::endl;
     std::cout << "*        Create new phone with copy-constructor       *" << std::endl;
 
-    Phone phone3 = phone2;
+    Phone phone3(phone2);
 
     std::cout << "*            Print phone specifications               *" << std::endl;
     std::cout << "*******************************************************" << std::endl;
@@ -53,6 +50,5 @@ int main(){
     std::cout << "**********************************************************" << std::endl;
     
     phone4.getPhoneSpecs();
-    
     return 0;
 }

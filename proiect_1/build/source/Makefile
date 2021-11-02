@@ -116,6 +116,44 @@ depend:
 	cd /home/catalin/IEP/proiect_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+source/CMakeFiles/mainTest.dir/rule:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/CMakeFiles/mainTest.dir/rule
+.PHONY : source/CMakeFiles/mainTest.dir/rule
+
+# Convenience name for target.
+mainTest: source/CMakeFiles/mainTest.dir/rule
+.PHONY : mainTest
+
+# fast build rule for target.
+mainTest/fast:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/mainTest.dir/build.make source/CMakeFiles/mainTest.dir/build
+.PHONY : mainTest/fast
+
+gtest/mainTest.o: gtest/mainTest.cpp.o
+.PHONY : gtest/mainTest.o
+
+# target to build an object file
+gtest/mainTest.cpp.o:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/mainTest.dir/build.make source/CMakeFiles/mainTest.dir/gtest/mainTest.cpp.o
+.PHONY : gtest/mainTest.cpp.o
+
+gtest/mainTest.i: gtest/mainTest.cpp.i
+.PHONY : gtest/mainTest.i
+
+# target to preprocess a source file
+gtest/mainTest.cpp.i:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/mainTest.dir/build.make source/CMakeFiles/mainTest.dir/gtest/mainTest.cpp.i
+.PHONY : gtest/mainTest.cpp.i
+
+gtest/mainTest.s: gtest/mainTest.cpp.s
+.PHONY : gtest/mainTest.s
+
+# target to generate assembly for a file
+gtest/mainTest.cpp.s:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/mainTest.dir/build.make source/CMakeFiles/mainTest.dir/gtest/mainTest.cpp.s
+.PHONY : gtest/mainTest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... mainTest"
+	@echo "... gtest/mainTest.o"
+	@echo "... gtest/mainTest.i"
+	@echo "... gtest/mainTest.s"
 .PHONY : help
 
 

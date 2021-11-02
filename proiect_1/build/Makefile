@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named mainTest
+
+# Build rule for target.
+mainTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mainTest
+.PHONY : mainTest
+
+# fast build rule for target.
+mainTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainTest.dir/build.make CMakeFiles/mainTest.dir/build
+.PHONY : mainTest/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -128,6 +141,30 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+gtest/mainTest.o: gtest/mainTest.cpp.o
+.PHONY : gtest/mainTest.o
+
+# target to build an object file
+gtest/mainTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainTest.dir/build.make CMakeFiles/mainTest.dir/gtest/mainTest.cpp.o
+.PHONY : gtest/mainTest.cpp.o
+
+gtest/mainTest.i: gtest/mainTest.cpp.i
+.PHONY : gtest/mainTest.i
+
+# target to preprocess a source file
+gtest/mainTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainTest.dir/build.make CMakeFiles/mainTest.dir/gtest/mainTest.cpp.i
+.PHONY : gtest/mainTest.cpp.i
+
+gtest/mainTest.s: gtest/mainTest.cpp.s
+.PHONY : gtest/mainTest.s
+
+# target to generate assembly for a file
+gtest/mainTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainTest.dir/build.make CMakeFiles/mainTest.dir/gtest/mainTest.cpp.s
+.PHONY : gtest/mainTest.cpp.s
 
 source/main.o: source/main.cpp.o
 .PHONY : source/main.o
@@ -158,6 +195,7 @@ source/phone.o: source/phone.cpp.o
 
 # target to build an object file
 source/phone.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainTest.dir/build.make CMakeFiles/mainTest.dir/source/phone.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/phone.cpp.o
 .PHONY : source/phone.cpp.o
 
@@ -166,6 +204,7 @@ source/phone.i: source/phone.cpp.i
 
 # target to preprocess a source file
 source/phone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainTest.dir/build.make CMakeFiles/mainTest.dir/source/phone.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/phone.cpp.i
 .PHONY : source/phone.cpp.i
 
@@ -174,6 +213,7 @@ source/phone.s: source/phone.cpp.s
 
 # target to generate assembly for a file
 source/phone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainTest.dir/build.make CMakeFiles/mainTest.dir/source/phone.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/phone.cpp.s
 .PHONY : source/phone.cpp.s
 
@@ -186,6 +226,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... mainTest"
+	@echo "... gtest/mainTest.o"
+	@echo "... gtest/mainTest.i"
+	@echo "... gtest/mainTest.s"
 	@echo "... source/main.o"
 	@echo "... source/main.i"
 	@echo "... source/main.s"

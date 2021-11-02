@@ -1,11 +1,13 @@
 #include "phone.hpp"
 #include<iostream>
 
-Phone::Phone(): phone(UNDEFINED_PHONE), color(UNDEFINED_COLOR), proccesor(UNDEFINED_PROCCESOR),
-battery(0), ram(0), internalStorage(0), g5(false), wifi(false),
-bluetooth(false), dualSim(false), waterResistance(false) {}
+Phone::Phone(): battery(0), ram(0), internalStorage(0), g5(false), wifi(false),
+bluetooth(false), dualSim(false), waterResistance(false), phone(UNDEFINED_PHONE), 
+color(UNDEFINED_COLOR), proccesor(UNDEFINED_PROCCESOR) {
+}
 
 Phone::Phone(PhoneTypes selectedPhone, colorTypes selectedColor, proccesorTypes selectedProccesor){
+    
     switch(selectedPhone){
         case IPHONE_12_MINI:
              phone = IPHONE_12_MINI;
@@ -138,19 +140,9 @@ Phone::Phone(PhoneTypes selectedPhone, colorTypes selectedColor, proccesorTypes 
     }
 }
 
-Phone::Phone(const Phone& copiedPhone){
-    phone = copiedPhone.phone;
-    color = copiedPhone.color;
-    proccesor = copiedPhone.proccesor;
-    battery = copiedPhone.battery;
-    ram = copiedPhone.ram;
-    internalStorage = copiedPhone.internalStorage;
-    g5 = copiedPhone.g5;
-    wifi = copiedPhone.wifi;
-    bluetooth = copiedPhone.bluetooth;
-    dualSim = copiedPhone.dualSim;
-    waterResistance = copiedPhone.waterResistance;
-}
+Phone::Phone(const Phone& copiedPhone): battery(copiedPhone.battery), ram(copiedPhone.ram), internalStorage(copiedPhone.internalStorage), 
+g5(copiedPhone.g5), wifi(copiedPhone.wifi), bluetooth(copiedPhone.bluetooth), dualSim(copiedPhone.dualSim), waterResistance(copiedPhone.waterResistance),
+phone(copiedPhone.phone), color(copiedPhone.color), proccesor(copiedPhone.proccesor){}
 
 Phone::~Phone(){}
 
@@ -244,7 +236,7 @@ void Phone::getPhoneSpecs(){
           case SAMSUNG_S21_ULTRA:
                phoneType = "SAMSUNG S21 ULTRA";
                break;
-          default: std::cout << "ERROR: Undefined phone type" << std::endl;
+          default: phoneType = "ERROR: Undefined phone type";
      }
 
      switch(getPhoneColor()){
@@ -281,7 +273,7 @@ void Phone::getPhoneSpecs(){
           case BLUE:
                color = "BLUE";
                break;
-          default: std::cout << "ERROR: Undefined color type" << std::endl;
+          default: color = "ERROR: Undefined color type";
      }
 
      switch(getPhoneProccesor()){
@@ -294,7 +286,7 @@ void Phone::getPhoneSpecs(){
           case QUALCOMM:
                proccesor = "QUALCOMM";
                break;
-          default: std::cout << "ERROR: Undefined proccesor type" << std::endl;
+          default: proccesor = "ERROR: Undefined proccesor type";
      }
 
      std::cout << std::endl;

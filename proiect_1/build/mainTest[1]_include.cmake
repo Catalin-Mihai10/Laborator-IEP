@@ -1,0 +1,5 @@
+if(EXISTS "/home/catalin/IEP/proiect_1/build/mainTest[1]_tests.cmake")
+  include("/home/catalin/IEP/proiect_1/build/mainTest[1]_tests.cmake")
+else()
+  add_test(mainTest_NOT_BUILT mainTest_NOT_BUILT)
+endif()
