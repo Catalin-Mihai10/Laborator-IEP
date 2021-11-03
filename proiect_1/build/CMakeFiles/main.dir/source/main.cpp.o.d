@@ -1,6 +1,5 @@
 CMakeFiles/main.dir/source/main.cpp.o: \
  /home/catalin/IEP/proiect_1/source/main.cpp /usr/include/stdc-predef.h \
- /home/catalin/IEP/proiect_1/interface/main.hpp \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

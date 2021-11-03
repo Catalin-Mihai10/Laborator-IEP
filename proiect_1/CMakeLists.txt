@@ -12,7 +12,6 @@ include_directories(interface source gtest)
 #add cpp files here
 add_executable(
         main
-        interface/main.hpp
         interface/phone.hpp
         source/phone.cpp 
         source/main.cpp
