@@ -3,6 +3,8 @@
 
 #include "basicTypes.hpp"
 
+namespace phone{
+
 class Phone {
 
     public:
@@ -16,11 +18,11 @@ class Phone {
 
         void upgradeMemory(memoryTypes newInternalStorage);
 
-        PhoneTypes getPhoneType();
+        PhoneTypes getPhoneType() const;
 
-        colorTypes getPhoneColor();
+        colorTypes getPhoneColor() const;
 
-        proccesorTypes getPhoneProccesor();
+        proccesorTypes getPhoneProccesor() const;
 
         void getPhoneSpecs(); 
 
@@ -44,15 +46,20 @@ class Phone {
 
         void switchPhoneRam();
 
+        void displayPhone();
+
+        Phone& operator=(const Phone&);
+
     private:
         Phone(Phone&&) = default;
-        Phone& operator=(Phone&);
 
         int battery, ram, internalStorage;
         bool g5, wifi, bluetooth, dualSim, waterResistance;
         PhoneTypes phone;
         colorTypes color;
         proccesorTypes proccesor;
+
 };
+}
 
 #endif 

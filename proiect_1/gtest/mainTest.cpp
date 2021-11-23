@@ -2,7 +2,7 @@
 #include "phone.hpp"
 
 TEST(CheckDefaultConstructor, testDefaultConstructor){
-    Phone phone;
+    phone::Phone phone;
 
     int expectedBatteryValue = 0;
     int actualBatteryValue = phone.getBattery();
@@ -51,7 +51,7 @@ TEST(CheckDefaultConstructor, testDefaultConstructor){
 }
 
 TEST(CheckParametrizedConstructor, testParametrizedConstructor){
-    Phone phone(SAMSUNG_S21,GRAY,QUALCOMM);
+    phone::Phone phone(SAMSUNG_S21,GRAY,QUALCOMM);
 
     int expectedBatteryValue = 4000;
     int actualBatteryValue = phone.getBattery();
@@ -100,8 +100,8 @@ TEST(CheckParametrizedConstructor, testParametrizedConstructor){
 }
 
 TEST(CheckCopyConstructor, testCopyConstructor){
-    Phone phone(SAMSUNG_S21,GRAY,QUALCOMM);
-    Phone copyPhone(phone);
+    phone::Phone phone(SAMSUNG_S21,GRAY,QUALCOMM);
+    phone::Phone copyPhone(phone);
 
     int expectedBatteryValue = 4000;
     int actualBatteryValue = copyPhone.getBattery();
@@ -150,84 +150,84 @@ TEST(CheckCopyConstructor, testCopyConstructor){
 }
 
 TEST(CheckPhoneBattery, testGetBattery){
-    Phone phone;
+    phone::Phone phone;
     int expectedValue = 0;
     int actualValue = phone.getBattery();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = 2227;
     actualValue = phone_1.getBattery();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
     expectedValue = 2815;
     actualValue = phone_2.getBattery();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
     expectedValue = 2815;
     actualValue = phone_3.getBattery();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
     expectedValue = 3687;
     actualValue = phone_4.getBattery();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = 4000;
     actualValue = phone_5.getBattery();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
     expectedValue = 4800;
     actualValue = phone_6.getBattery();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = 5000;
     actualValue = phone_7.getBattery();
     ASSERT_EQ(expectedValue, actualValue);
 }
 
 TEST(CheckPhoneRam, testGetRam){
-    Phone phone;
+    phone::Phone phone;
     int expectedValue = 0;
     int actualValue = phone.getRam();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = 4;
     actualValue = phone_1.getRam();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
     expectedValue = 4;
     actualValue = phone_2.getRam();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
     expectedValue = 6;
     actualValue = phone_3.getRam();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
     expectedValue = 6;
     actualValue = phone_4.getRam();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = 8;
     actualValue = phone_5.getRam();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
     expectedValue = 8;
     actualValue = phone_6.getRam();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = 12;
     actualValue = phone_7.getRam();
     ASSERT_EQ(expectedValue, actualValue);
@@ -239,12 +239,12 @@ TEST(CheckPhoneRam, testGetRam){
 }
 
 TEST(CheckPhoneInternalStorage, testgetInternalStorage){
-    Phone phone;
+    phone::Phone phone;
     int expectedValue = 0;
     int actualValue = phone.getInternalStorage();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = 64;
     actualValue = phone_1.getInternalStorage();
     ASSERT_EQ(expectedValue, actualValue);
@@ -259,7 +259,7 @@ TEST(CheckPhoneInternalStorage, testgetInternalStorage){
     actualValue = phone_1.getInternalStorage();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
     expectedValue = 128;
     actualValue = phone_2.getInternalStorage();
     ASSERT_EQ(expectedValue, actualValue);
@@ -274,7 +274,7 @@ TEST(CheckPhoneInternalStorage, testgetInternalStorage){
     actualValue = phone_2.getInternalStorage();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = 128;
     actualValue = phone_3.getInternalStorage();
     ASSERT_EQ(expectedValue, actualValue);
@@ -284,7 +284,7 @@ TEST(CheckPhoneInternalStorage, testgetInternalStorage){
     actualValue = phone_3.getInternalStorage();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_4(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = 128;
     actualValue = phone_4.getInternalStorage();
     ASSERT_EQ(expectedValue, actualValue);
@@ -301,316 +301,316 @@ TEST(CheckPhoneInternalStorage, testgetInternalStorage){
 }
 
 TEST(CheckThatPhoneHas5G, testHas5G){
-    Phone phone;
+    phone::Phone phone;
     bool expectedValue = false;
     bool actualValue = phone.has5G();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_1.has5G();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_2.has5G();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_3.has5G();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_4.has5G();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_5.has5G();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_6.has5G();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_7.has5G();
     ASSERT_EQ(expectedValue, actualValue);
 }
 
 TEST(CheckThatPhoneHasWifi, testHasWifi){
-    Phone phone;
+    phone::Phone phone;
     bool expectedValue = false;
     bool actualValue = phone.hasWifi();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_1.hasWifi();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_2.hasWifi();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_3.hasWifi();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_4.hasWifi();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_5.hasWifi();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_6.hasWifi();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_7.hasWifi();
     ASSERT_EQ(expectedValue, actualValue);
 }
 
 TEST(CheckThatPhoneHasBluetoot, testHasBluetooth){
-    Phone phone;
+    phone::Phone phone;
     bool expectedValue = false;
     bool actualValue = phone.hasBluetooth();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_1.hasBluetooth();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_2.hasBluetooth();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_3.hasBluetooth();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_4.hasBluetooth();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_5.hasBluetooth();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_6.hasBluetooth();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_7.hasBluetooth();
     ASSERT_EQ(expectedValue, actualValue);
 }
 
 TEST(CheckThatPhoneHasDualSim, testPhoneHasDualSim){
-    Phone phone;
+    phone::Phone phone;
     bool expectedValue = false;
     bool actualValue = phone.hasDualSim();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_1.hasDualSim();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_2.hasDualSim();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_3.hasDualSim();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_4.hasDualSim();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = false;
     actualValue = phone_5.hasDualSim();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_6.hasDualSim();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_7.hasDualSim();
     ASSERT_EQ(expectedValue, actualValue);
 }
 
 TEST(CheckThatPhoneIsWaterResistant, testIsWaterResistant){
-    Phone phone;
+    phone::Phone phone;
     bool expectedValue = false;
     bool actualValue = phone.isWaterResistant();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_1.isWaterResistant();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_2.isWaterResistant();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_3.isWaterResistant();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_4.isWaterResistant();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_5.isWaterResistant();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_6.isWaterResistant();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = true;
     actualValue = phone_7.isWaterResistant();
     ASSERT_EQ(expectedValue, actualValue);
 }
 
 TEST(CheckPhoneType, testGetPhoneType){
-    Phone phone;
+    phone::Phone phone;
     PhoneTypes expectedValue = UNDEFINED_PHONE;
     PhoneTypes actualValue = phone.getPhoneType();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = IPHONE_12_MINI;
     actualValue = phone_1.getPhoneType();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GOLD, SNAPDRAGON);
     expectedValue = IPHONE_12;
     actualValue = phone_2.getPhoneType();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, GOLD, SNAPDRAGON);
     expectedValue = IPHONE_12_PRO;
     actualValue = phone_3.getPhoneType();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GOLD, SNAPDRAGON);
-    expectedValue = IPHONE_21_PRO_MAX;
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GOLD, SNAPDRAGON);
+    expectedValue = IPHONE_12_PRO_MAX;
     actualValue = phone_4.getPhoneType();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, GOLD, SNAPDRAGON);
     expectedValue = SAMSUNG_S21;
     actualValue = phone_5.getPhoneType();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, GOLD, SNAPDRAGON);
     expectedValue = SAMSUNG_S21_PLUS;
     actualValue = phone_6.getPhoneType();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, GOLD, SNAPDRAGON);
     expectedValue = SAMSUNG_S21_ULTRA;
     actualValue = phone_7.getPhoneType();
     ASSERT_EQ(expectedValue, actualValue);
 }
 
 TEST(CheckPhoneColor, testGetPhoneColor){
-    Phone phone;
+    phone::Phone phone;
     colorTypes expectedValue = UNDEFINED_COLOR;
     colorTypes actualValue = phone.getPhoneColor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = GOLD;
     actualValue = phone_1.getPhoneColor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GREEN, SNAPDRAGON);
+    phone::Phone phone_2(IPHONE_12, GREEN, SNAPDRAGON);
     expectedValue = GREEN;
     actualValue = phone_2.getPhoneColor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, TITANIUM, SNAPDRAGON);
+    phone::Phone phone_3(IPHONE_12_PRO, TITANIUM, SNAPDRAGON);
     expectedValue = TITANIUM;
     actualValue = phone_3.getPhoneColor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_4(IPHONE_21_PRO_MAX, GRAY, SNAPDRAGON);
+    phone::Phone phone_4(IPHONE_12_PRO_MAX, GRAY, SNAPDRAGON);
     expectedValue = GRAY;
     actualValue = phone_4.getPhoneColor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_5(SAMSUNG_S21, BROWN, SNAPDRAGON);
+    phone::Phone phone_5(SAMSUNG_S21, BROWN, SNAPDRAGON);
     expectedValue = BROWN;
     actualValue = phone_5.getPhoneColor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_6(SAMSUNG_S21_PLUS, WHITE, SNAPDRAGON);
+    phone::Phone phone_6(SAMSUNG_S21_PLUS, WHITE, SNAPDRAGON);
     expectedValue = WHITE;
     actualValue = phone_6.getPhoneColor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_7(SAMSUNG_S21_ULTRA, BLACK, SNAPDRAGON);
+    phone::Phone phone_7(SAMSUNG_S21_ULTRA, BLACK, SNAPDRAGON);
     expectedValue = BLACK;
     actualValue = phone_7.getPhoneColor();
     ASSERT_EQ(expectedValue, actualValue);  
 }
 
 TEST(CheckPhoneProccesor, testGetPhoneProccesor){
-    Phone phone;
+    phone::Phone phone;
     proccesorTypes expectedValue = UNDEFINED_PROCCESOR;
     proccesorTypes actualValue = phone.getPhoneProccesor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
+    phone::Phone phone_1(IPHONE_12_MINI, GOLD, SNAPDRAGON);
     expectedValue = SNAPDRAGON;
     actualValue = phone_1.getPhoneProccesor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_2(IPHONE_12, GREEN, EXYNOS);
+    phone::Phone phone_2(IPHONE_12, GREEN, EXYNOS);
     expectedValue = EXYNOS;
     actualValue = phone_2.getPhoneProccesor();
     ASSERT_EQ(expectedValue, actualValue);
 
-    Phone phone_3(IPHONE_12_PRO, TITANIUM, QUALCOMM);
+    phone::Phone phone_3(IPHONE_12_PRO, TITANIUM, QUALCOMM);
     expectedValue = QUALCOMM;
     actualValue = phone_3.getPhoneProccesor();
     ASSERT_EQ(expectedValue, actualValue);

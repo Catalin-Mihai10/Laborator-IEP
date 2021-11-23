@@ -307,12 +307,16 @@ CMakeFiles/mainTest.dir/gtest/mainTest.cpp.o: ../gtest/mainTest.cpp \
   /usr/include/gtest/gtest-typed-test.h \
   /usr/include/gtest/gtest_pred_impl.h \
   ../interface/phone.hpp \
-  ../interface/basicTypes.hpp
+  ../interface/basicTypes.hpp \
+  ../interface/phoneTypes.hpp \
+  ../interface/storeTypes.hpp
 
 CMakeFiles/mainTest.dir/source/phone.cpp.o: ../source/phone.cpp \
   /usr/include/stdc-predef.h \
   ../interface/phone.hpp \
   ../interface/basicTypes.hpp \
+  ../interface/phoneTypes.hpp \
+  ../interface/storeTypes.hpp \
   /usr/include/c++/9/iostream \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -483,6 +487,8 @@ CMakeFiles/mainTest.dir/source/phone.cpp.o: ../source/phone.cpp \
   /usr/include/c++/9/istream \
   /usr/include/c++/9/bits/istream.tcc
 
+
+../interface/phoneTypes.hpp:
 
 ../interface/basicTypes.hpp:
 
@@ -1041,6 +1047,8 @@ CMakeFiles/mainTest.dir/source/phone.cpp.o: ../source/phone.cpp \
 /usr/include/c++/9/stdexcept:
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+../interface/storeTypes.hpp:
 
 /usr/include/c++/9/algorithm:
 

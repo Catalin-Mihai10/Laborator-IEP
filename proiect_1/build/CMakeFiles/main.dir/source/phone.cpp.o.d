@@ -2,6 +2,8 @@ CMakeFiles/main.dir/source/phone.cpp.o: \
  /home/catalin/IEP/proiect_1/source/phone.cpp /usr/include/stdc-predef.h \
  /home/catalin/IEP/proiect_1/interface/phone.hpp \
  /home/catalin/IEP/proiect_1/interface/basicTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/phoneTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/storeTypes.hpp \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

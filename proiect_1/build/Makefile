@@ -142,6 +142,19 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) $(MAKESILENT) -f source/CMakeFiles/client.dir/build.make source/CMakeFiles/client.dir/build
+.PHONY : client/fast
+
 gtest/mainTest.o: gtest/mainTest.cpp.o
 .PHONY : gtest/mainTest.o
 
@@ -217,6 +230,30 @@ source/phone.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/phone.cpp.s
 .PHONY : source/phone.cpp.s
 
+source/store.o: source/store.cpp.o
+.PHONY : source/store.o
+
+# target to build an object file
+source/store.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/store.cpp.o
+.PHONY : source/store.cpp.o
+
+source/store.i: source/store.cpp.i
+.PHONY : source/store.i
+
+# target to preprocess a source file
+source/store.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/store.cpp.i
+.PHONY : source/store.cpp.i
+
+source/store.s: source/store.cpp.s
+.PHONY : source/store.s
+
+# target to generate assembly for a file
+source/store.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/store.cpp.s
+.PHONY : source/store.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -225,6 +262,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... client"
 	@echo "... main"
 	@echo "... mainTest"
 	@echo "... gtest/mainTest.o"
@@ -236,6 +274,9 @@ help:
 	@echo "... source/phone.o"
 	@echo "... source/phone.i"
 	@echo "... source/phone.s"
+	@echo "... source/store.o"
+	@echo "... source/store.i"
+	@echo "... source/store.s"
 .PHONY : help
 
 

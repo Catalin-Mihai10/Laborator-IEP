@@ -4,8 +4,6 @@
 #include "basicLibraries.hpp"
 #include "basicTypes.hpp"
 #include "phone.hpp"
-#include "client.hpp"
-
 
 namespace store {
 
@@ -17,23 +15,28 @@ namespace store {
 
             virtual ~Store();
 
-            Store operator=(Store&);
+            Store& operator=(const Store&);
 
             void displayPhones();
 
-            void checkPhoneStock();
+            void getPhoneSpecifications(phone::Phone phone);
 
-            void buyPhone(client::Client client);
+            void createIphoneStock();
 
-            void getPhoneSpecifications(Phone::Phone phone);
+            void createSamsungStock();
 
-            void addPhonesStock();
+            void addPossiblePhonesColors();
 
+            void addPossibleIphonePhonesModels();
+
+            void addPossibleSamsungPhonesModels();
         private:
-            Store(Store&&) = delete;
-            std::map<int, client::Client> clientsMap;
-            std::map<int, Phone::Phone> phonesMap;
-            std::map<Phone::Phone, int> phonesStock;
+            bool verifyPhoneExistence(phone::Phone phone1, phone::Phone phone2);
+
+            std::vector<phone::Phone> phonesInStore;
+            std::vector<colorTypes> possibleColors;
+            std::vector<PhoneTypes> possbileIphoneModels;
+            std::vector<PhoneTypes> possbileSamsungModels;
             storeTypes storeType;
     };
 }

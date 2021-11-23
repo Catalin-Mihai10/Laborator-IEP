@@ -1,12 +1,13 @@
 #include<iostream>
 #include "phone.hpp"
+#include "store.hpp"
 
 int main(){
 
     std::cout << std::endl;
     std::cout << "*********************************" << std::endl;
     std::cout << "*Create phone with no parameters*" << std::endl;
-    Phone phone1;
+    phone::Phone phone1;
 
     std::cout << "*  Print phone specifications   *" << std::endl;
     std::cout << "*********************************" << std::endl;
@@ -17,7 +18,7 @@ int main(){
     std::cout << "*******************************************************" << std::endl;
     std::cout << "*Create Samsung S21 Gray color with Qualcomm proccesor*" << std::endl;
     
-    Phone phone2(SAMSUNG_S21,GRAY,QUALCOMM);
+    phone::Phone phone2(SAMSUNG_S21,GRAY,QUALCOMM);
     
     std::cout << "*               Memory storage: " << phone2.getInternalStorage()<<"                   *" << std::endl;
     std::cout << "*             Upgrade memmory to 256 GB               *" << std::endl;
@@ -29,7 +30,7 @@ int main(){
     std::cout << "*******************************************************" << std::endl;
     std::cout << "*        Create new phone with copy-constructor       *" << std::endl;
 
-    Phone phone3(phone2);
+    phone::Phone phone3(phone2);
 
     std::cout << "*            Print phone specifications               *" << std::endl;
     std::cout << "*******************************************************" << std::endl;
@@ -39,7 +40,7 @@ int main(){
     std::cout << "**********************************************************" << std::endl;
     std::cout << "*Create IPHONE PRO MAX GOLD color with Qualcomm proccesor*" << std::endl;
    
-    Phone phone4(IPHONE_21_PRO_MAX,GOLD,SNAPDRAGON);
+    phone::Phone phone4(IPHONE_12_PRO_MAX,GOLD,SNAPDRAGON);
     
     std::cout << "*                Memory storage:   " << phone4.getInternalStorage()<<"                   *" << std::endl;
     std::cout << "*              Upgrade memmory to 512 GB                 *" << std::endl;
@@ -50,5 +51,12 @@ int main(){
     std::cout << "**********************************************************" << std::endl;
     
     phone4.getPhoneSpecs();
+
+    store::Store store(IPHONE_STORE);
+
+    phone::Phone phone5(IPHONE_12_PRO_MAX,GOLD,QUALCOMM);
+    
+    store.displayPhones();
+    store.getPhoneSpecifications(phone5);
     return 0;
 }

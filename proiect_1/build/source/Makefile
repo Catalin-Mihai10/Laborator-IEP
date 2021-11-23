@@ -117,42 +117,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-source/CMakeFiles/mainTest.dir/rule:
-	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/CMakeFiles/mainTest.dir/rule
-.PHONY : source/CMakeFiles/mainTest.dir/rule
+source/CMakeFiles/client.dir/rule:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/CMakeFiles/client.dir/rule
+.PHONY : source/CMakeFiles/client.dir/rule
 
 # Convenience name for target.
-mainTest: source/CMakeFiles/mainTest.dir/rule
-.PHONY : mainTest
+client: source/CMakeFiles/client.dir/rule
+.PHONY : client
 
 # fast build rule for target.
-mainTest/fast:
-	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/mainTest.dir/build.make source/CMakeFiles/mainTest.dir/build
-.PHONY : mainTest/fast
+client/fast:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/client.dir/build.make source/CMakeFiles/client.dir/build
+.PHONY : client/fast
 
-gtest/mainTest.o: gtest/mainTest.cpp.o
-.PHONY : gtest/mainTest.o
+client/client.o: client/client.cpp.o
+.PHONY : client/client.o
 
 # target to build an object file
-gtest/mainTest.cpp.o:
-	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/mainTest.dir/build.make source/CMakeFiles/mainTest.dir/gtest/mainTest.cpp.o
-.PHONY : gtest/mainTest.cpp.o
+client/client.cpp.o:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/client.dir/build.make source/CMakeFiles/client.dir/client/client.cpp.o
+.PHONY : client/client.cpp.o
 
-gtest/mainTest.i: gtest/mainTest.cpp.i
-.PHONY : gtest/mainTest.i
+client/client.i: client/client.cpp.i
+.PHONY : client/client.i
 
 # target to preprocess a source file
-gtest/mainTest.cpp.i:
-	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/mainTest.dir/build.make source/CMakeFiles/mainTest.dir/gtest/mainTest.cpp.i
-.PHONY : gtest/mainTest.cpp.i
+client/client.cpp.i:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/client.dir/build.make source/CMakeFiles/client.dir/client/client.cpp.i
+.PHONY : client/client.cpp.i
 
-gtest/mainTest.s: gtest/mainTest.cpp.s
-.PHONY : gtest/mainTest.s
+client/client.s: client/client.cpp.s
+.PHONY : client/client.s
 
 # target to generate assembly for a file
-gtest/mainTest.cpp.s:
-	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/mainTest.dir/build.make source/CMakeFiles/mainTest.dir/gtest/mainTest.cpp.s
-.PHONY : gtest/mainTest.cpp.s
+client/client.cpp.s:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/client.dir/build.make source/CMakeFiles/client.dir/client/client.cpp.s
+.PHONY : client/client.cpp.s
 
 # Help Target
 help:
@@ -162,10 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... mainTest"
-	@echo "... gtest/mainTest.o"
-	@echo "... gtest/mainTest.i"
-	@echo "... gtest/mainTest.s"
+	@echo "... client"
+	@echo "... client/client.o"
+	@echo "... client/client.i"
+	@echo "... client/client.s"
 .PHONY : help
 
 

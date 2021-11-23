@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/catalin/IEP/proiect_1/source/main.cpp" "CMakeFiles/main.dir/source/main.cpp.o" "gcc" "CMakeFiles/main.dir/source/main.cpp.o.d"
   "/home/catalin/IEP/proiect_1/source/phone.cpp" "CMakeFiles/main.dir/source/phone.cpp.o" "gcc" "CMakeFiles/main.dir/source/phone.cpp.o.d"
+  "/home/catalin/IEP/proiect_1/source/store.cpp" "CMakeFiles/main.dir/source/store.cpp.o" "gcc" "CMakeFiles/main.dir/source/store.cpp.o.d"
   )
 
 # Targets to which this target links.
