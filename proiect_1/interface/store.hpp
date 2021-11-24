@@ -1,8 +1,7 @@
 #ifndef STORE_INTERFACE_STOREiNTERFACE_HPP
 #define STORE_INTERFACE_STOREiNTERFACE_HPP
 
-#include "basicLibraries.hpp"
-#include "basicTypes.hpp"
+#include "basicheaders/basicHeaders.hpp"
 #include "phone.hpp"
 
 namespace store {

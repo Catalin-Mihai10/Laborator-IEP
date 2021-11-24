@@ -1,6 +1,5 @@
 #include<iostream>
-#include "phone.hpp"
-#include "store.hpp"
+#include "interfaceHeaders.hpp"
 
 int main(){
 
@@ -58,5 +57,11 @@ int main(){
     
     store.displayPhones();
     store.getPhoneSpecifications(phone5);
+
+    store::Store store1;
+    store1 = store;
+
+    store1.displayPhones();
+    store1.getPhoneSpecifications(phone5);
     return 0;
 }

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libphone.a CMakeFiles/phone.dir/phone.cpp.o
+/usr/bin/ranlib libphone.a

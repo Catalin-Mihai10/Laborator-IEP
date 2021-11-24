@@ -11,7 +11,7 @@ set(TEST_TARGET mainTest)
 #add gtest package and direcotries
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
-include_directories(interface gtest)
+include_directories(interface gtest interface/basicheaders)
 add_subdirectory(source)
 
 set(PROJECT_DIRECTORIES interface source gtest)

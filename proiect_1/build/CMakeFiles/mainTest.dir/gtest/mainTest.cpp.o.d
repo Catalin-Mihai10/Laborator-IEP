@@ -240,6 +240,8 @@ CMakeFiles/mainTest.dir/gtest/mainTest.cpp.o: \
  /usr/include/gtest/gtest-typed-test.h \
  /usr/include/gtest/gtest_pred_impl.h \
  /home/catalin/IEP/proiect_1/interface/phone.hpp \
- /home/catalin/IEP/proiect_1/interface/basicTypes.hpp \
- /home/catalin/IEP/proiect_1/interface/phoneTypes.hpp \
- /home/catalin/IEP/proiect_1/interface/storeTypes.hpp
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicHeaders.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicLibraries.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/phoneTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/storeTypes.hpp

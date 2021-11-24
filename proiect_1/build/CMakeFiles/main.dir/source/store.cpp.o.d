@@ -1,7 +1,8 @@
 CMakeFiles/main.dir/source/store.cpp.o: \
  /home/catalin/IEP/proiect_1/source/store.cpp /usr/include/stdc-predef.h \
  /home/catalin/IEP/proiect_1/interface/store.hpp \
- /home/catalin/IEP/proiect_1/interface/basicLibraries.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicHeaders.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicLibraries.hpp \
  /usr/include/c++/9/string \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -152,7 +153,7 @@ CMakeFiles/main.dir/source/store.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/catalin/IEP/proiect_1/interface/basicTypes.hpp \
- /home/catalin/IEP/proiect_1/interface/phoneTypes.hpp \
- /home/catalin/IEP/proiect_1/interface/storeTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/phoneTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/storeTypes.hpp \
  /home/catalin/IEP/proiect_1/interface/phone.hpp

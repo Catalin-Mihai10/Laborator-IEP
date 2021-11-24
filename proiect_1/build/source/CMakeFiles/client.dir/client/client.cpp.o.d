@@ -2,7 +2,7 @@ source/CMakeFiles/client.dir/client/client.cpp.o: \
  /home/catalin/IEP/proiect_1/source/client/client.cpp \
  /usr/include/stdc-predef.h \
  /home/catalin/IEP/proiect_1/source/client/client.hpp \
- /home/catalin/IEP/proiect_1/interface/basicLibraries.hpp \
+ /home/catalin/IEP/proiect_1/interface/../interface/basicheaders/basicLibraries.hpp \
  /usr/include/c++/9/string \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

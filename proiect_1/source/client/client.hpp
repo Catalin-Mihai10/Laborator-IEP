@@ -1,7 +1,7 @@
 #ifndef CLIENT_INTERFACE_CLIENTINTERFACE_HPP
 #define CLIENT_INTERFACE_CLIENTINTERFACE_HPP
 
-#include "basicLibraries.hpp"
+#include "../interface/basicheaders/basicLibraries.hpp"
 
 namespace client {
 

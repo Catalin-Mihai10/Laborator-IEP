@@ -136,12 +136,9 @@ CMakeFiles/main.dir/source/main.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/catalin/IEP/proiect_1/interface/phone.hpp \
- /home/catalin/IEP/proiect_1/interface/basicTypes.hpp \
- /home/catalin/IEP/proiect_1/interface/phoneTypes.hpp \
- /home/catalin/IEP/proiect_1/interface/storeTypes.hpp \
- /home/catalin/IEP/proiect_1/interface/store.hpp \
- /home/catalin/IEP/proiect_1/interface/basicLibraries.hpp \
+ /home/catalin/IEP/proiect_1/interface/interfaceHeaders.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicHeaders.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicLibraries.hpp \
  /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
  /usr/include/c++/9/ext/aligned_buffer.h \
  /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/tuple \
@@ -153,4 +150,8 @@ CMakeFiles/main.dir/source/main.cpp.o: \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /home/catalin/IEP/proiect_1/interface/phone.hpp
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/phoneTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/storeTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/phone.hpp \
+ /home/catalin/IEP/proiect_1/interface/store.hpp
