@@ -507,12 +507,8 @@ CMakeFiles/mainTest.dir/source/phone.cpp.o: ../source/phone.cpp \
   /usr/include/c++/9/bits/istream.tcc \
   ../interface/basicheaders/basicTypes.hpp \
   ../interface/basicheaders/phoneTypes.hpp \
-  ../interface/basicheaders/storeTypes.hpp \
-  ../interface/store.hpp \
-  ../interface/phone.hpp
+  ../interface/basicheaders/storeTypes.hpp
 
-
-../interface/store.hpp:
 
 ../interface/basicheaders/storeTypes.hpp:
 
