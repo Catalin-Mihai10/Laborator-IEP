@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/main.dir/source/Lock.cpp.o"
+  "CMakeFiles/main.dir/source/Lock.cpp.o.d"
+  "CMakeFiles/main.dir/source/client.cpp.o"
+  "CMakeFiles/main.dir/source/client.cpp.o.d"
   "CMakeFiles/main.dir/source/main.cpp.o"
   "CMakeFiles/main.dir/source/main.cpp.o.d"
   "CMakeFiles/main.dir/source/phone.cpp.o"

@@ -150,8 +150,32 @@ CMakeFiles/main.dir/source/main.cpp.o: \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
+ /usr/include/c++/9/memory /usr/include/c++/9/bits/stl_tempbuf.h \
+ /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/9/ext/concurrence.h \
+ /usr/include/c++/9/bits/unique_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr_base.h \
+ /usr/include/c++/9/bits/allocated_ptr.h \
+ /usr/include/c++/9/bits/refwrap.h \
+ /usr/include/c++/9/bits/shared_ptr_atomic.h \
+ /usr/include/c++/9/bits/atomic_base.h \
+ /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/9/backward/auto_ptr.h /usr/include/c++/9/mutex \
+ /usr/include/c++/9/chrono /usr/include/c++/9/ratio \
+ /usr/include/c++/9/limits /usr/include/c++/9/ctime \
+ /usr/include/c++/9/bits/parse_numbers.h \
+ /usr/include/c++/9/bits/std_mutex.h \
+ /usr/include/c++/9/bits/unique_lock.h /usr/include/c++/9/thread \
+ /usr/include/c++/9/functional /usr/include/c++/9/bits/std_function.h \
  /home/catalin/IEP/proiect_1/interface/basicheaders/basicTypes.hpp \
  /home/catalin/IEP/proiect_1/interface/basicheaders/phoneTypes.hpp \
  /home/catalin/IEP/proiect_1/interface/basicheaders/storeTypes.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicLibraries.hpp \
  /home/catalin/IEP/proiect_1/interface/phone.hpp \
- /home/catalin/IEP/proiect_1/interface/store.hpp
+ /home/catalin/IEP/proiect_1/interface/store.hpp \
+ /home/catalin/IEP/proiect_1/interface/Lock.hpp \
+ /home/catalin/IEP/proiect_1/interface/../interface/basicheaders/basicLibraries.hpp \
+ /home/catalin/IEP/proiect_1/interface/client.hpp \
+ /home/catalin/IEP/proiect_1/interface/basicheaders/basicLibraries.hpp \
+ /home/catalin/IEP/proiect_1/interface/client.hpp

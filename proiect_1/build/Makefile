@@ -142,19 +142,6 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-#=============================================================================
-# Target rules for targets named client
-
-# Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
-.PHONY : client
-
-# fast build rule for target.
-client/fast:
-	$(MAKE) $(MAKESILENT) -f source/CMakeFiles/client.dir/build.make source/CMakeFiles/client.dir/build
-.PHONY : client/fast
-
 gtest/mainTest.o: gtest/mainTest.cpp.o
 .PHONY : gtest/mainTest.o
 
@@ -178,6 +165,54 @@ gtest/mainTest.s: gtest/mainTest.cpp.s
 gtest/mainTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mainTest.dir/build.make CMakeFiles/mainTest.dir/gtest/mainTest.cpp.s
 .PHONY : gtest/mainTest.cpp.s
+
+source/Lock.o: source/Lock.cpp.o
+.PHONY : source/Lock.o
+
+# target to build an object file
+source/Lock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/Lock.cpp.o
+.PHONY : source/Lock.cpp.o
+
+source/Lock.i: source/Lock.cpp.i
+.PHONY : source/Lock.i
+
+# target to preprocess a source file
+source/Lock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/Lock.cpp.i
+.PHONY : source/Lock.cpp.i
+
+source/Lock.s: source/Lock.cpp.s
+.PHONY : source/Lock.s
+
+# target to generate assembly for a file
+source/Lock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/Lock.cpp.s
+.PHONY : source/Lock.cpp.s
+
+source/client.o: source/client.cpp.o
+.PHONY : source/client.o
+
+# target to build an object file
+source/client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/client.cpp.o
+.PHONY : source/client.cpp.o
+
+source/client.i: source/client.cpp.i
+.PHONY : source/client.i
+
+# target to preprocess a source file
+source/client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/client.cpp.i
+.PHONY : source/client.cpp.i
+
+source/client.s: source/client.cpp.s
+.PHONY : source/client.s
+
+# target to generate assembly for a file
+source/client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/source/client.cpp.s
+.PHONY : source/client.cpp.s
 
 source/main.o: source/main.cpp.o
 .PHONY : source/main.o
@@ -262,12 +297,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... client"
 	@echo "... main"
 	@echo "... mainTest"
 	@echo "... gtest/mainTest.o"
 	@echo "... gtest/mainTest.i"
 	@echo "... gtest/mainTest.s"
+	@echo "... source/Lock.o"
+	@echo "... source/Lock.i"
+	@echo "... source/Lock.s"
+	@echo "... source/client.o"
+	@echo "... source/client.i"
+	@echo "... source/client.s"
 	@echo "... source/main.o"
 	@echo "... source/main.i"
 	@echo "... source/main.s"

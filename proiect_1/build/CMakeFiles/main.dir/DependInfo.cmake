@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/catalin/IEP/proiect_1/source/Lock.cpp" "CMakeFiles/main.dir/source/Lock.cpp.o" "gcc" "CMakeFiles/main.dir/source/Lock.cpp.o.d"
+  "/home/catalin/IEP/proiect_1/source/client.cpp" "CMakeFiles/main.dir/source/client.cpp.o" "gcc" "CMakeFiles/main.dir/source/client.cpp.o.d"
   "/home/catalin/IEP/proiect_1/source/main.cpp" "CMakeFiles/main.dir/source/main.cpp.o" "gcc" "CMakeFiles/main.dir/source/main.cpp.o.d"
   "/home/catalin/IEP/proiect_1/source/phone.cpp" "CMakeFiles/main.dir/source/phone.cpp.o" "gcc" "CMakeFiles/main.dir/source/phone.cpp.o.d"
   "/home/catalin/IEP/proiect_1/source/store.cpp" "CMakeFiles/main.dir/source/store.cpp.o" "gcc" "CMakeFiles/main.dir/source/store.cpp.o.d"

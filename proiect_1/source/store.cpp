@@ -1,9 +1,13 @@
 #include "store.hpp"
 
 namespace store {
+
+    int Store::idClient = -1;   
     
     Store::Store() : storeType(UNDEFINED), phonesInStore{},
-                     possibleColors{}, possbileIphoneModels{}, possbileSamsungModels{}{}
+                     possibleColors{}, possbileIphoneModels{}, possbileSamsungModels{}{
+
+    }
 
     Store::Store(storeTypes givenStoreType) : storeType(givenStoreType), phonesInStore{},
                      possibleColors{}, possbileIphoneModels{}, possbileSamsungModels{}{
@@ -39,8 +43,8 @@ namespace store {
         
         std::cout << "Phones in store: " << std::endl;
 
-        for(phone::Phone phone : phonesInStore){
-            phone.displayPhone();
+        for(phone::PhonePtr phone : phonesInStore){
+            phone->displayPhone();
         }
 
         std::cout << "End" << std::endl;
@@ -53,9 +57,9 @@ namespace store {
 
         bool foundInShop = false;
 
-        for(phone::Phone iPhone : phonesInStore){
+        for(phone::PhonePtr iPhone : phonesInStore){
             if(verifyPhoneExistence(iPhone, phone)){
-                iPhone.getPhoneSpecs();
+                iPhone->getPhoneSpecs();
                 foundInShop = true;
             }
         }
@@ -71,7 +75,7 @@ namespace store {
 
         for(PhoneTypes phoneType : possbileIphoneModels){
             for(colorTypes colorType : possibleColors){
-                phone::Phone auxPhone(phoneType, colorType, QUALCOMM);
+                phone::PhonePtr auxPhone(new phone::Phone(phoneType, colorType, QUALCOMM));
                 phonesInStore.push_back(auxPhone);
             }
         }
@@ -87,14 +91,14 @@ namespace store {
 
         for(PhoneTypes phoneType : possbileSamsungModels){
             for(colorTypes colorType : possibleColors){
-                phone::Phone auxPhone(phoneType, colorType, SNAPDRAGON);
+                phone::PhonePtr auxPhone(new phone::Phone(phoneType, colorType, SNAPDRAGON));
                 phonesInStore.push_back(auxPhone);
             }
         }
 
         for(PhoneTypes phoneType : possbileSamsungModels){
             for(colorTypes colorType : possibleColors){
-                phone::Phone auxPhone(phoneType, colorType, EXYNOS);
+                phone::PhonePtr auxPhone(new phone::Phone(phoneType, colorType, EXYNOS));
                 phonesInStore.push_back(auxPhone);
             }
         }
@@ -129,10 +133,59 @@ namespace store {
         possbileSamsungModels.push_back(SAMSUNG_S21_ULTRA);
     }
 
-    bool Store::verifyPhoneExistence(phone::Phone phone1, phone::Phone phone2){
-        if((phone1.getPhoneType() == phone2.getPhoneType()) && (phone1.getPhoneColor() == phone2.getPhoneColor())
-            && (phone1.getPhoneProccesor() == phone2.getPhoneProccesor())) return true;
+    void Store::addClientToStore(client::ClientPtr client){
+        bool doesNotExist = false;
+
+        if(clients.empty()) {
+            incrementID();
+            int id = getID();
+            std::cout<< id << std::endl;
+            clients.insert(std::map<int, std::string>::value_type(id, client->getName()));
+            std::cout << "Utilizatorul: " << client->getName() << " adaugat cu succes" << std::endl;
+            return;
+        }
+
+        for(std::map<int, std::string>::iterator id = clients.begin(); id != clients.end(); id++){
+            if(id->second== client->getName()) doesNotExist = true;
+        }
+
+        if(!doesNotExist){
+            incrementID();
+            int id = getID();
+            std::cout << id << std::endl;
+            clients.insert(std::map<int, std::string>::value_type(id, client->getName()));
+            std::cout << "Utilizatorul: " << client->getName() << " adaugat cu succes" << std::endl;
+        }
+    }
+
+    bool Store::verifyPhoneExistence(phone::PhonePtr iterator, phone::Phone phone2){
+        if((iterator->getPhoneType() == phone2.getPhoneType()) && (iterator->getPhoneColor() == phone2.getPhoneColor())
+            && (iterator->getPhoneProccesor() == phone2.getPhoneProccesor())) return true;
         
         return false;
+    }
+
+    void Store::incrementID(){
+        std::cout << "lock" << std::endl;
+        lock.lock();
+        std::cout << "increment" << std::endl;
+        idClient++;
+        std::cout << "apeleaza unlock" << std::endl;
+        lock.unlock();
+        std::cout << "unlock" << std::endl;
+    }
+
+    void Store::decrementID(){
+        std::cout << "lock" << std::endl;
+        lock.lock();
+        std::cout << "decrement" << std::endl;
+        idClient--;
+        std::cout << "apeleaza unlock" << std::endl;
+        lock.unlock();
+        std::cout << "unlock" << std::endl;
+    }
+
+    int Store::getID(){
+        return idClient;
     }
 }   

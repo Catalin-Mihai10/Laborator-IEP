@@ -69,10 +69,38 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
+CMakeFiles/main.dir/source/client.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/source/client.cpp.o: ../source/client.cpp
+CMakeFiles/main.dir/source/client.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/source/client.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/source/client.cpp.o -MF CMakeFiles/main.dir/source/client.cpp.o.d -o CMakeFiles/main.dir/source/client.cpp.o -c /home/catalin/IEP/proiect_1/source/client.cpp
+
+CMakeFiles/main.dir/source/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/source/client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/catalin/IEP/proiect_1/source/client.cpp > CMakeFiles/main.dir/source/client.cpp.i
+
+CMakeFiles/main.dir/source/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/source/client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/catalin/IEP/proiect_1/source/client.cpp -o CMakeFiles/main.dir/source/client.cpp.s
+
+CMakeFiles/main.dir/source/Lock.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/source/Lock.cpp.o: ../source/Lock.cpp
+CMakeFiles/main.dir/source/Lock.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/source/Lock.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/source/Lock.cpp.o -MF CMakeFiles/main.dir/source/Lock.cpp.o.d -o CMakeFiles/main.dir/source/Lock.cpp.o -c /home/catalin/IEP/proiect_1/source/Lock.cpp
+
+CMakeFiles/main.dir/source/Lock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/source/Lock.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/catalin/IEP/proiect_1/source/Lock.cpp > CMakeFiles/main.dir/source/Lock.cpp.i
+
+CMakeFiles/main.dir/source/Lock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/source/Lock.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/catalin/IEP/proiect_1/source/Lock.cpp -o CMakeFiles/main.dir/source/Lock.cpp.s
+
 CMakeFiles/main.dir/source/phone.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/source/phone.cpp.o: ../source/phone.cpp
 CMakeFiles/main.dir/source/phone.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/source/phone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/source/phone.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/source/phone.cpp.o -MF CMakeFiles/main.dir/source/phone.cpp.o.d -o CMakeFiles/main.dir/source/phone.cpp.o -c /home/catalin/IEP/proiect_1/source/phone.cpp
 
 CMakeFiles/main.dir/source/phone.cpp.i: cmake_force
@@ -86,7 +114,7 @@ CMakeFiles/main.dir/source/phone.cpp.s: cmake_force
 CMakeFiles/main.dir/source/store.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/source/store.cpp.o: ../source/store.cpp
 CMakeFiles/main.dir/source/store.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/source/store.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/source/store.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/source/store.cpp.o -MF CMakeFiles/main.dir/source/store.cpp.o.d -o CMakeFiles/main.dir/source/store.cpp.o -c /home/catalin/IEP/proiect_1/source/store.cpp
 
 CMakeFiles/main.dir/source/store.cpp.i: cmake_force
@@ -100,7 +128,7 @@ CMakeFiles/main.dir/source/store.cpp.s: cmake_force
 CMakeFiles/main.dir/source/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/source/main.cpp.o: ../source/main.cpp
 CMakeFiles/main.dir/source/main.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/source/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/source/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/source/main.cpp.o -MF CMakeFiles/main.dir/source/main.cpp.o.d -o CMakeFiles/main.dir/source/main.cpp.o -c /home/catalin/IEP/proiect_1/source/main.cpp
 
 CMakeFiles/main.dir/source/main.cpp.i: cmake_force
@@ -113,6 +141,8 @@ CMakeFiles/main.dir/source/main.cpp.s: cmake_force
 
 # Object files for target main
 main_OBJECTS = \
+"CMakeFiles/main.dir/source/client.cpp.o" \
+"CMakeFiles/main.dir/source/Lock.cpp.o" \
 "CMakeFiles/main.dir/source/phone.cpp.o" \
 "CMakeFiles/main.dir/source/store.cpp.o" \
 "CMakeFiles/main.dir/source/main.cpp.o"
@@ -120,12 +150,14 @@ main_OBJECTS = \
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
+main: CMakeFiles/main.dir/source/client.cpp.o
+main: CMakeFiles/main.dir/source/Lock.cpp.o
 main: CMakeFiles/main.dir/source/phone.cpp.o
 main: CMakeFiles/main.dir/source/store.cpp.o
 main: CMakeFiles/main.dir/source/main.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/catalin/IEP/proiect_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

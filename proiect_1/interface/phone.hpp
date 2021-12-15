@@ -5,6 +5,9 @@
 
 namespace phone{
 
+class Phone;
+typedef std::shared_ptr<Phone> PhonePtr;
+
 class Phone {
 
     public:

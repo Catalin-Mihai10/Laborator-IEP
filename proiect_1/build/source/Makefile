@@ -117,6 +117,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+source/CMakeFiles/Lock.dir/rule:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/CMakeFiles/Lock.dir/rule
+.PHONY : source/CMakeFiles/Lock.dir/rule
+
+# Convenience name for target.
+Lock: source/CMakeFiles/Lock.dir/rule
+.PHONY : Lock
+
+# fast build rule for target.
+Lock/fast:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/Lock.dir/build.make source/CMakeFiles/Lock.dir/build
+.PHONY : Lock/fast
+
+# Convenience name for target.
 source/CMakeFiles/client.dir/rule:
 	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/CMakeFiles/client.dir/rule
 .PHONY : source/CMakeFiles/client.dir/rule
@@ -129,6 +143,30 @@ client: source/CMakeFiles/client.dir/rule
 client/fast:
 	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/client.dir/build.make source/CMakeFiles/client.dir/build
 .PHONY : client/fast
+
+Lock/Lock.o: Lock/Lock.cpp.o
+.PHONY : Lock/Lock.o
+
+# target to build an object file
+Lock/Lock.cpp.o:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/Lock.dir/build.make source/CMakeFiles/Lock.dir/Lock/Lock.cpp.o
+.PHONY : Lock/Lock.cpp.o
+
+Lock/Lock.i: Lock/Lock.cpp.i
+.PHONY : Lock/Lock.i
+
+# target to preprocess a source file
+Lock/Lock.cpp.i:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/Lock.dir/build.make source/CMakeFiles/Lock.dir/Lock/Lock.cpp.i
+.PHONY : Lock/Lock.cpp.i
+
+Lock/Lock.s: Lock/Lock.cpp.s
+.PHONY : Lock/Lock.s
+
+# target to generate assembly for a file
+Lock/Lock.cpp.s:
+	cd /home/catalin/IEP/proiect_1/build && $(MAKE) $(MAKESILENT) -f source/CMakeFiles/Lock.dir/build.make source/CMakeFiles/Lock.dir/Lock/Lock.cpp.s
+.PHONY : Lock/Lock.cpp.s
 
 client/client.o: client/client.cpp.o
 .PHONY : client/client.o
@@ -162,7 +200,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Lock"
 	@echo "... client"
+	@echo "... Lock/Lock.o"
+	@echo "... Lock/Lock.i"
+	@echo "... Lock/Lock.s"
 	@echo "... client/client.o"
 	@echo "... client/client.i"
 	@echo "... client/client.s"

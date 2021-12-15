@@ -3,6 +3,8 @@
 
 #include "basicheaders/basicHeaders.hpp"
 #include "phone.hpp"
+#include "Lock.hpp"
+#include "client.hpp"
 
 namespace store {
 
@@ -29,14 +31,27 @@ namespace store {
             void addPossibleIphonePhonesModels();
 
             void addPossibleSamsungPhonesModels();
-        private:
-            bool verifyPhoneExistence(phone::Phone phone1, phone::Phone phone2);
 
-            std::vector<phone::Phone> phonesInStore;
+            void addClientToStore(client::ClientPtr client);
+
+            void removeClientFromStore(std::string clientName);
+        private:
+            bool verifyPhoneExistence(phone::PhonePtr phone1, phone::Phone phone2);
+
+            void incrementID();
+
+            void decrementID();
+
+            int getID();
+
+            std::vector<phone::PhonePtr> phonesInStore;
             std::vector<colorTypes> possibleColors;
             std::vector<PhoneTypes> possbileIphoneModels;
             std::vector<PhoneTypes> possbileSamsungModels;
+            std::map<int, std::string> clients;
+            Lock::Lock lock;
             storeTypes storeType;
+            static int idClient;
     };
 }
 

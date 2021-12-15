@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/mainTest.dir/source/phone.cpp.o CMakeFiles/mainTest.dir/gtest/mainTest.cpp.o -o mainTest  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 
+/usr/bin/c++ -pthread -rdynamic CMakeFiles/mainTest.dir/source/phone.cpp.o CMakeFiles/mainTest.dir/gtest/mainTest.cpp.o -o mainTest  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/catalin/IEP/proiect_1/interface -I/home/catalin/IEP/proiect_1/gtest -I/home/catalin/IEP/proiect_1/interface/basicheaders -I/home/catalin/IEP/proiect_1/source/client -I/home/catalin/IEP/proiect_1/source/phone
+CXX_INCLUDES = -I/home/catalin/IEP/proiect_1/interface -I/home/catalin/IEP/proiect_1/gtest -I/home/catalin/IEP/proiect_1/interface/basicheaders -I/home/catalin/IEP/proiect_1/source/client -I/home/catalin/IEP/proiect_1/source/Lock
 
 CXX_FLAGS = 
 
