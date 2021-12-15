@@ -66,16 +66,15 @@ int main(){
     store1.displayPhones();
     store1.getPhoneSpecifications(phone5);
 
-    client::ClientPtr client1(new client::Client("Catalin", "Sever Bocu"));
-    client::ClientPtr client2(new client::Client("Mircea", "Aleea aleelor"));
-    client::ClientPtr client3(new client::Client("Licea", "Bobocu bobocilor"));
-    client::ClientPtr client4(new client::Client("Bucea", "Mafiotu mafiotilor"));
-    client::ClientPtr client5(new client::Client("Gigi", "Aleea Becalilor"));
-    client::ClientPtr client6(new client::Client("Bobo", "Strada strazii"));
-    client::ClientPtr client7(new client::Client("Doru", "Ni ma la el"));
-    client::ClientPtr client8(new client::Client("Lica", "Intre pomi"));
+    client::ClientPtr client1 = std::make_unique<client::Client>("Catalin", "Sever Bocu");
+    client::ClientPtr client2 = std::make_unique<client::Client>("Mircea", "Aleea aleelor");
+    client::ClientPtr client3 = std::make_unique<client::Client>("Licea", "Bobocu bobocilor");
+    client::ClientPtr client4 = std::make_unique<client::Client>("Bucea", "Mafiotu mafiotilor");
+    client::ClientPtr client5 = std::make_unique<client::Client>("Gigi", "Aleea Becalilor");
+    client::ClientPtr client6 = std::make_unique<client::Client>("Bobo", "Strada strazii");
+    client::ClientPtr client7 = std::make_unique<client::Client>("Doru", "Ni ma la el");
+    client::ClientPtr client8 = std::make_unique<client::Client>("Lica", "Intre pomi");
 
- 
     std::thread thread1(&store::Store::addClientToStore, &store1, std::move(client1));
     std::thread thread2(&store::Store::addClientToStore, &store1, std::move(client2));
     std::thread thread3(&store::Store::addClientToStore, &store1, std::move(client3));
